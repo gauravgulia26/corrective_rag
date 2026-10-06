@@ -57,3 +57,25 @@ def load_settings(
 
     prms = load_params(path=param_file_path)[param_key]
     return LoadBaseSettings(llm_config=model_config(**prms))
+
+
+def load_prompt(path: str | Path) -> str:
+    """
+    Load a prompt file and return its content as clean text.
+
+    Parameters
+    ----------
+    path:
+        Path to the prompt file.
+
+    Returns
+    -------
+    str
+        Prompt content with leading/trailing whitespace removed.
+    """
+    prompt_path = Path(path)
+
+    if not prompt_path.is_file():
+        raise FileNotFoundError(f"Prompt file not found: {prompt_path}")
+
+    return prompt_path.read_text(encoding="utf-8").strip()
