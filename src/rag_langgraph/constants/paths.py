@@ -1,0 +1,74 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+# Directory names
+CONFIG_DIR_NAME: str = "config"
+DATA_DIR_NAME: str = "data"
+DATABASE_DIR_NAME: str = "database"
+NOTEBOOKS_DIR_NAME: str = "notebooks"
+SCRIPTS_DIR_NAME: str = "scripts"
+SRC_DIR_NAME: str = "src"
+
+# Relative directory paths
+CONFIG_DIR_PATH: Path = Path(CONFIG_DIR_NAME)
+DATA_DIR_PATH: Path = Path(DATA_DIR_NAME)
+DATABASE_DIR_PATH: Path = Path(DATABASE_DIR_NAME)
+NOTEBOOKS_DIR_PATH: Path = Path(NOTEBOOKS_DIR_NAME)
+SCRIPTS_DIR_PATH: Path = Path(SCRIPTS_DIR_NAME)
+SRC_DIR_PATH: Path = Path(SRC_DIR_NAME)
+
+# YAML and configuration file names and relative paths
+MODEL_YAML_FILE_NAME: str = "model.yaml"
+MODEL_CONFIG_FILE_NAME: str = MODEL_YAML_FILE_NAME
+
+MODEL_YAML_PATH: Path = CONFIG_DIR_PATH / MODEL_YAML_FILE_NAME
+MODEL_CONFIG_YAML_PATH: Path = MODEL_YAML_PATH
+MODEL_YAML_RELATIVE_PATH: Path = MODEL_YAML_PATH
+CONFIG_YAML_PATH: Path = MODEL_YAML_PATH
+
+# Environment file constants
+ENV_FILE_NAME: str = ".env"
+ENV_FILE_PATH: Path = Path(ENV_FILE_NAME)
+
+# Data file constants
+NEP_PDF_FILE_NAME: str = "nep2020.pdf"
+NEP_PDF_RELATIVE_PATH: Path = DATA_DIR_PATH / NEP_PDF_FILE_NAME
+
+REVIEWS_CSV_FILE_NAME: str = "reviews.csv"
+REVIEWS_CSV_RELATIVE_PATH: Path = DATA_DIR_PATH / REVIEWS_CSV_FILE_NAME
+
+# Database file constants
+NEP_DB_FILE_NAME: str = "nep_policy.db"
+NEP_DB_RELATIVE_PATH: Path = DATABASE_DIR_PATH / NEP_DB_FILE_NAME
+MILVUS_COLLECTION_NAME: str = "nep_v1"
+
+__all__ = [
+    "CONFIG_DIR_NAME",
+    "CONFIG_DIR_PATH",
+    "CONFIG_YAML_PATH",
+    "DATABASE_DIR_NAME",
+    "DATABASE_DIR_PATH",
+    "DATA_DIR_NAME",
+    "DATA_DIR_PATH",
+    "ENV_FILE_NAME",
+    "ENV_FILE_PATH",
+    "MILVUS_COLLECTION_NAME",
+    "MODEL_CONFIG_FILE_NAME",
+    "MODEL_CONFIG_YAML_PATH",
+    "MODEL_YAML_FILE_NAME",
+    "MODEL_YAML_PATH",
+    "MODEL_YAML_RELATIVE_PATH",
+    "NEP_DB_FILE_NAME",
+    "NEP_DB_RELATIVE_PATH",
+    "NEP_PDF_FILE_NAME",
+    "NEP_PDF_RELATIVE_PATH",
+    "NOTEBOOKS_DIR_NAME",
+    "NOTEBOOKS_DIR_PATH",
+    "REVIEWS_CSV_FILE_NAME",
+    "REVIEWS_CSV_RELATIVE_PATH",
+    "SCRIPTS_DIR_NAME",
+    "SCRIPTS_DIR_PATH",
+    "SRC_DIR_NAME",
+    "SRC_DIR_PATH",
+]

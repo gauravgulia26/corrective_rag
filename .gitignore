@@ -1,0 +1,65 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+wheels/
+*.egg-info/
+*.egg
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+parts/
+var/
+sdist/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Jupyter Notebooks & checkpoints
+notebooks/
+*.ipynb
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Local databases, vector stores & lock files
+*.db
+*.db/
+*.sqlite
+*.sqlite3
+LOCK
+test.db/
+database/nep_policy.db/
+
+# IDE & editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Linters, tests & tooling caches
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Logs & temporary files
+*.log
+tmp/
+temp/
