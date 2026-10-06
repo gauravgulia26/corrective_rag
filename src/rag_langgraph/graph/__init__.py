@@ -1,3 +1,4 @@
 from .graph import AgentGraphBuilder
 
-__all__ = ["AgentGraphBuilder"]
+workflow = AgentGraphBuilder.get_graph()
+__all__ = ["workflow"]

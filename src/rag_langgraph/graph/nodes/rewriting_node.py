@@ -1,4 +1,4 @@
-from rag_langgraph.agent.factory import ChainLoader
+from rag_langgraph.application.factory import ChainLoader
 
 from ..state import AgentState
 
