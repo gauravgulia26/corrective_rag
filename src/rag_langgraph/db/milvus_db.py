@@ -12,13 +12,14 @@ def get_vector_store(
         collection_name=collection_name,
         builtin_function=BM25BuiltInFunction(),
         vector_field=["dense", "sparse"],
+        auto_id=True,
         index_params=[
             {
                 "index_type": "AUTOINDEX",
                 "metric_type": "COSINE",
             },
             {
-                "index_type": "AUTOINDEX",
+                "index_type": "SPARSE_INVERTED_INDEX",
                 "metric_type": "BM25",
             },
         ],

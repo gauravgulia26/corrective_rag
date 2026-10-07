@@ -1,6 +1,9 @@
+from functools import lru_cache
+
 from langchain_huggingface import HuggingFaceEmbeddings
 
 
+@lru_cache
 def get_embedding_model(
     api_key: str,
     model_name: str = "intfloat/multilingual-e5-base",

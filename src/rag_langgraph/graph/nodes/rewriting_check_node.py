@@ -1,6 +1,6 @@
 from langchain_typesafe import Choice
 
-from rag_langgraph.models import get_system_one_model
+from rag_langgraph.models.system_one_models import get_system_one_model
 
 from ..state import AgentState
 

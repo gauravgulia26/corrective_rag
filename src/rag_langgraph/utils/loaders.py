@@ -79,3 +79,9 @@ def load_prompt(path: str | Path) -> str:
         raise FileNotFoundError(f"Prompt file not found: {prompt_path}")
 
     return prompt_path.read_text(encoding="utf-8").strip()
+
+
+def ingest_into_db():
+    from rag_langgraph.infra.ingestion import ingest_data
+
+    return ingest_data()
