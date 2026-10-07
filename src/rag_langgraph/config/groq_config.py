@@ -5,6 +5,6 @@ from pydantic.dataclasses import dataclass
 class GroqConfig:
     model_name: str
     temperature: float
-    max_tokens: int
-    max_retries: int
+    max_tokens: int | None = None
+    max_retries: int | None = 3
     reasoning_effort: str = None

@@ -1,22 +1,14 @@
 from functools import lru_cache
-from pathlib import Path
 
 from langchain_groq import ChatGroq
 
 from rag_langgraph.config.groq_config import GroqConfig
-from rag_langgraph.config.paths import MODEL_CONFIG_PATH
-from rag_langgraph.utils.loaders import load_settings
-
-_DEFAULT_CONFIG_PATH = MODEL_CONFIG_PATH
+from rag_langgraph.settings.base import LoadBaseSettings
 
 
 @lru_cache
-def get_llm(param_file_path: str | Path = _DEFAULT_CONFIG_PATH) -> ChatGroq:
-    sts = load_settings(
-        model_config=GroqConfig,
-        param_key="groq",
-        param_file_path=param_file_path,
-    )
+def get_llm(llm_config: GroqConfig) -> ChatGroq:
+    sts = LoadBaseSettings(llm_config=llm_config)
     return ChatGroq(
         model=sts.llm_config.model_name,
         temperature=sts.llm_config.temperature,
